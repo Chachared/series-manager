@@ -1,0 +1,9 @@
+.home {
+  font-family: Nunito;
+  color: white;
+  background-color: #119286;
+  border-radius: 40px;
+}
+.home:hover {
+  background-color: #37af5d;
+}

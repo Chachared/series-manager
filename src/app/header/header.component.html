@@ -1,0 +1,13 @@
+<div class="position-relative">
+  <h1 class="text-center my-4">Mes séries préférées à partager</h1>
+
+  <div *ngIf="isConnected" class="position-absolute top-0 end-0 mt-2">
+    <button [routerLink]="['/series', 'new']" class="sign-in btn mx-2">
+      Ajouter
+    </button>
+
+    <button (click)="onClickSignOut()" class="sign-out btn mx-2">
+      Me déconnecter
+    </button>
+  </div>
+</div>

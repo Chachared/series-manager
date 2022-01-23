@@ -1,0 +1,15 @@
+<div class="row col-6 card shadow mx-auto">
+  <div class="card-body text-center">
+    <h5 class="card-title">Donnez votre avis</h5>
+
+    <app-comment-form
+      buttonLabel="Ajouter"
+      [serieId]="serieId"
+      (formSubmitted)="onSubmitNewComment($event)"
+    ></app-comment-form>
+
+    <button [routerLink]="['/series', serieId]" class="btn back mt-2">
+      Retour
+    </button>
+  </div>
+</div>

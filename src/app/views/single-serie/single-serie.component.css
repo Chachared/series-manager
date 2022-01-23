@@ -1,0 +1,25 @@
+.back {
+  font-family: Nunito;
+  color: white;
+  background-color: #262534;
+  border-radius: 40px;
+}
+
+.back:hover {
+  background-color: #119286;
+}
+
+h2 {
+  color: white;
+}
+
+.add-comment {
+  font-family: Nunito;
+  color: white;
+  background-color: #262534;
+  border-radius: 40px;
+}
+
+.add-comment:hover {
+  background-color: #759313;
+}

@@ -1,0 +1,15 @@
+.sign-out,
+.sign-in {
+  font-family: Nunito;
+  color: white;
+  background-color: #119286;
+  border-radius: 40px;
+}
+
+.sign-out:hover {
+  background-color: #ec343c;
+}
+
+.sign-in:hover {
+  background-color: #759313;
+}

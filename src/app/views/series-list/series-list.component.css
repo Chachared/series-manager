@@ -1,0 +1,35 @@
+.card {
+  background-color: #e2e1f0;
+}
+
+.details {
+  font-family: Nunito;
+  color: white;
+  background-color: #262534;
+  border-radius: 40px;
+}
+
+.details:hover {
+  background-color: #119286;
+}
+
+.edition {
+  font-family: Nunito;
+  color: white;
+  background-color: #119286;
+  border-radius: 40px;
+}
+.edition:hover {
+  background-color: #37af5d;
+}
+
+.delete {
+  font-family: Nunito;
+  color: white;
+  background-color: #920505;
+  border-radius: 40px;
+}
+
+.delete:hover {
+  background-color: #e8021b;
+}

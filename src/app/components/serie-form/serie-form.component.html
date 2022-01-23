@@ -1,0 +1,64 @@
+<form [formGroup]="form" (ngSubmit)="onSubmitSerieForm()">
+  <div class="form-group">
+    <label for="title">Nom de la série</label>
+    <input
+      id="title"
+      class="form-control"
+      formControlName="title"
+      [(ngModel)]="serie.title"
+    />
+  </div>
+  <div class="form-group">
+    <label for="releaseDate">Date de sortie</label>
+    <input
+      type="date"
+      id="releaseDate"
+      class="form-control"
+      formControlName="releaseDate"
+      (ngModelChange)="onChangeReleaseDate($event)"
+      [ngModel]="serie.releaseDate | date: 'yyyy-MM-dd'"
+    />
+  </div>
+  <div class="form-group">
+    <label for="numberOfSeasons">Nombre de saisons</label>
+    <input
+      id="numberOfSeasons"
+      class="form-control"
+      formControlName="numberOfSeasons"
+      [(ngModel)]="serie.numberOfSeasons"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Synopsis</label>
+    <input
+      id="description"
+      class="form-control"
+      formControlName="description"
+      [(ngModel)]="serie.description"
+    />
+  </div>
+  <div class="form-group">
+    <label for="review">Avis de la critique</label>
+    <input
+      id="review"
+      class="form-control"
+      formControlName="review"
+      [(ngModel)]="serie.review"
+    />
+  </div>
+  <div class="form-group">
+    <label for="imgUrl">URL de l'image</label>
+    <input
+      id="imgUrl"
+      class="form-control"
+      formControlName="imgUrl"
+      [(ngModel)]="serie.imgUrl"
+    />
+  </div>
+
+  <div class="row col-4 mx-auto">
+    <button type="submit" class="btn submit btn-lg" [disabled]="form.invalid">
+      {{ buttonLabel }}
+    </button>
+  </div>
+</form>

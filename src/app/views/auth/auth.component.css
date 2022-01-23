@@ -1,0 +1,21 @@
+body {
+  background-color: #262534;
+}
+.card {
+  background-color: #e2e1f0;
+}
+.submit {
+  font-family: Nunito;
+  color: white;
+  background-color: #119286;
+  border-radius: 40px;
+}
+
+.submit:hover {
+  background-color: #ec343c;
+}
+
+.submit:hover {
+  background-color: #262534;
+  color: white;
+}

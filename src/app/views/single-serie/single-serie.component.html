@@ -1,0 +1,52 @@
+<h2 class="text-center">Détails de la série</h2>
+<div class="container">
+  <div *ngIf="serie" class="row">
+    <div class="col-12 card shadow">
+      <div class="card-body text-center">
+        <h4 class="card-title">{{ serie.title }}</h4>
+        <img src="{{ serie.imgUrl }}" class="card-img-top rounded" />
+        <h5 class="mt-1">Synopsis</h5>
+        <p class="text-start">{{ serie.description }}</p>
+        <h5>Avis du critique</h5>
+        <p class="text-start">{{ serie.review }}</p>
+        <button routerLink="/series" class="back btn mt-2">RETOUR</button>
+      </div>
+    </div>
+
+    <div *ngIf="serie" class="col-12 card">
+      <div class="card-body text-center">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Numéro</th>
+              <th scope="col">Date du commentaire</th>
+              <th scope="col">Auteur</th>
+              <th scope="col" class="text-start">Commentaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let comment of comments; index as i">
+              <th scope="row">{{ comment.id }}</th>
+              <td>{{ comment.date | date: "dd-MM-yyyy" }}</td>
+              <td>
+                {{ comment.author }}
+              </td>
+              <td>
+                {{ comment.commentText }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mt-2">
+          <button
+            [routerLink]="['/comments', 'new', serie.id]"
+            class="btn add-comment mx-2"
+          >
+            Ajouter
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
